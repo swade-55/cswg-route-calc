@@ -241,11 +241,13 @@ def main() -> None:
         st.write("Missing Dispatch and/or EXE File")
     except KeyError:
         st.write("Please upload right data for EXE and/or Dispatch related calculations")
+    except ValueError:
+        st.write("Please unzip files and reupload")
 
 
 if __name__ == "__main__":
     st.set_page_config(
-        "EXE Team Selection Work Overview",
+        "EXE/Dispatch Selection Work Overview",
         "📊",
         initial_sidebar_state="auto",
         layout="centered",
